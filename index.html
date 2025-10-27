@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body> 
-    <header>
+    <header class="header">
         <div class="container">
             <div class="header-container">
                 <nav class="header-nav">
@@ -26,7 +26,7 @@
                         <li><a class="link" href="#contacts-section">Контакти</a></li>
                     </ul>
                 </nav>
-                <button class="button" type="button">Замовити дзвінок</button>
+                <button class="button modal-button-open" type="button">Замовити дзвінок</button>
             </div>
         </div>
     </header>
@@ -67,7 +67,7 @@
         </section>
         <section class="section" id="chefs-section">
             <div class="container">
-                <h2 class="chefs-title section-title centered">Наші найкращі <span class="accent">шеф-кухарі</span></h2>
+                <h2 class="chefs-title section-title centered">Наші найкращі <br> <span class="accent">шеф-кухарі</span></h2>
                 <ul class="chefs-list">
                     <li class="chefs-item">
                         <article class="chef-card">
@@ -143,7 +143,7 @@
                             </article>
                         </li>
                     </ul>
-                    <button class="carousel-button" type="button">
+                    <button class="carousel-button next" type="button">
                         <svg width="16" height="16">
                             <use href="./images/icons.svg#icon-arrow"></use>
                         </svg>
@@ -209,5 +209,28 @@
             </div>
         </div>
     </footer>
+
+    <div class="backdrop is-hidden">
+        <div class="modal">
+            <button type="button" class="modal-button-close">Close</button>
+            <h2>Замовити дзвінок</h2>
+            <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
+            <form name="contact-form" autocomplete="off" novalidate>
+                <label for="user-name">Ім'я</label>
+                <input type="text" name="user-name" id="user-name">
+
+                <label for="user-tel">Телефон</label>
+                <input type="tel" name="user-tel" id="user-tel">
+
+                <label for="user-email">Електронна пошта</label>
+                <input type="text" name="user-email" id="user-email">
+
+                <button type="submit">Замовити дздвінок</button>
+                <p>Натискаючи на кнопку я погоджуюсь з <a href="#">політикою конфіденційності</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
