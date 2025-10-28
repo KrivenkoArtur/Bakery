@@ -29,6 +29,15 @@
     padding: 128px;
     overflow-y: auto;
 
+    &__title {
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        text-align: center;
+        color: var(--color-brand-dark);
+    }
+
     &__form-field {
         margin-bottom: 32px;
     }
