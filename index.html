@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap" rel="stylesheet">
     <!-- Style -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body> 
     <header class="header">
@@ -110,6 +110,7 @@
                     <ul class="formats-list">
                         <li class="formats-item">
                             <article class="format-card">
+                                <img class="formats-image" src="./images/Walrus-format.jpg" alt="Walrus Format">
                                 <h3 class="format-title" lang="en">Walrus</h3>
                                 <div class="format-text">
                                     <p>Площа: до 120 м2</p>
@@ -122,6 +123,7 @@
                         </li>
                         <li class="formats-item">
                             <article class="format-card">
+                                <img class="formats-image" src="./images/Horseshoe-format.jpg" alt="Horseshoe Format">
                                 <h3 class="format-title" lang="en">Horseshoe</h3>
                                 <div class="format-text">
                                     <p>Площа: до 25 м2</p>
@@ -133,6 +135,7 @@
                         </li>
                         <li class="formats-item">
                             <article class="format-card">
+                                <img class="formats-image" src="./images/Handlebar-format.jpg" alt="Handlebar Format">
                                 <h3 class="format-title" lang="en">Handlebar</h3>
                                 <div class="format-text">
                                     <p>Площа: до 15 м2</p>
@@ -157,7 +160,27 @@
                     <div class="contact-form">
                         <h2 class="contact-titile section-title">Приєднуйся до мережі пекарень</h2>
                         <p>Заповни форму, щоб ми звʼязались з тобою!</p>
-                        <!-- Додати форму -->
+                        <form name="contact-form" autocomplete="off">
+                            <div class="form-field">
+                                <label class="form-label visually-hidden" for="user-name">Ім'я</label>
+                                <input class="form-input" type="text" name="user-name" id="user-name" placeholder="Ім'я" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label class="form-label visually-hidden" for="user-tel">Телефон</label>
+                                <input class="form-input" type="tel" name="user-tel" id="user-tel" placeholder="Телефон" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label class="form-label visually-hidden" for="user-email">Електронна пошта</label>
+                                <input class="form-input" type="text" name="user-email" id="user-email" placeholder="Електронна пошта" required>
+                            </div>
+
+                            <button class="form-button button" type="submit">Замовити дзвінок</button>
+                            <p class="form-terms">
+                                Натискаючи на кнопку я погоджуюсь з <a class="form-terms-link" href="#">політикою конфіденційності</a>
+                            </p>
+                        </form>
                     </div>
                     <iframe class="contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.163447036115!2d30.48869837606083!3d50.45668098691572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637c006b2d%3A0xaf86385f19996ff0!2z0YPQuy4g0KHQtdGH0LXQstGL0YUg0KHRgtGA0LXQu9GM0YbQvtCyLCA1NCwg0JrQuNC10LIsINCj0LrRgNCw0LjQvdCwLCAwMjAwMA!5e0!3m2!1sru!2sno!4v1761511210174!5m2!1sru!2sno" width="603" height="595" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
@@ -215,18 +238,26 @@
             <button type="button" class="modal-button-close">Close</button>
             <h2>Замовити дзвінок</h2>
             <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
-            <form name="contact-form" autocomplete="off" novalidate>
-                <label for="user-name">Ім'я</label>
-                <input type="text" name="user-name" id="user-name">
+            <form name="contact-form" autocomplete="off">
+                <div class="form-field">
+                    <label class="form-label visually-hidden" for="user-name">Ім'я</label>
+                    <input class="form-input" type="text" name="user-name" id="user-name" placeholder="Ім'я" required>
+                </div>
 
-                <label for="user-tel">Телефон</label>
-                <input type="tel" name="user-tel" id="user-tel">
+                <div class="form-field">
+                    <label class="form-label visually-hidden" for="user-tel">Телефон</label>
+                    <input class="form-input" type="tel" name="user-tel" id="user-tel" placeholder="Телефон" required pattern="^\+[0-9]{12}">
+                </div>
 
-                <label for="user-email">Електронна пошта</label>
-                <input type="text" name="user-email" id="user-email">
+                <div class="form-field">
+                    <label class="form-label visually-hidden" for="user-email">Електронна пошта</label>
+                    <input class="form-input" type="text" name="user-email" id="user-email" placeholder="Електронна пошта" required>
+                </div>
 
-                <button type="submit">Замовити дздвінок</button>
-                <p>Натискаючи на кнопку я погоджуюсь з <a href="#">політикою конфіденційності</a></p>
+                <button class="form-button button" type="submit">Замовити дздвінок</button>
+                <p class="form-terms">
+                    Натискаючи на кнопку я погоджуюсь з <a class="form-terms-link" href="#">політикою конфіденційності</a>
+                </p>
             </form>
         </div>
     </div>
