@@ -10,10 +10,11 @@
     &__image {
         width: 140px;
         border-radius: 4px 4px 4px 200px;
-        box-shadow: -16px 16px 0 0 var(--color-primary-white), -16px 16px 0 2px #A18268;
+        box-shadow: -8px 8px 0 0 var(--color-primary-white), -8px 8px 0 2px #A18268;
 
         @media screen and (min-width: $bp-desktop) {
             width: 240px;
+            box-shadow: -16px 16px 0 0 var(--color-primary-white), -16px 16px 0 2px #A18268;
         }
     }
 
